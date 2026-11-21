@@ -1,0 +1,6 @@
+$ sudo sshd -T | grep -E "^(permitrootlogin|passwordauthentication|pubkeyauthentication|maxauthtries|x11forwarding)"
+permitrootlogin no
+pubkeyauthentication yes
+passwordauthentication no
+maxauthtries 3
+x11forwarding no

@@ -1,0 +1,16 @@
+$ id student
+uid=1001(student) gid=1001(student) groups=1001(student),1002(lab)
+
+$ ls -la ~/notes
+total 20
+drwxr-xr-x 2 kali kali 4096 Nov 21 12:30 .
+drwx------ 18 kali kali 4096 Nov 21 12:25 ..
+-rw-r----- 1 kali lab    40 Nov 21 12:30 group_config.txt
+-rw------- 1 kali kali   42 Nov 21 12:30 private.txt
+-rwxr-xr-x 1 kali kali   78 Nov 21 12:30 run_check.sh
+
+$ ls -ld /srv/labshare
+drwxrwx--T+ 2 root lab 4096 Nov 21 12:31 /srv/labshare
+
+$ su - student -c "cat /home/kali/notes/private.txt"
+cat: /home/kali/notes/private.txt: Permission denied
